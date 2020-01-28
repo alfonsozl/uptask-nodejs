@@ -1,0 +1,25 @@
+{
+  "name": "uptasknodejs",
+  "version": "1.0.0",
+  "description": "Uptask app, using NodeJS and MVC pattern.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfonsozl/uptask-nodejs.git"
+  },
+  "author": "Alfonso Zendejas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfonsozl/uptask-nodejs/issues"
+  },
+  "homepage": "https://github.com/alfonsozl/uptask-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
