@@ -3,13 +3,21 @@ const express = require('express');
 
 // Creando la app de Express
 const app = express();
-const puerto = 3000;
+
+const productos = [
+    {
+        nombre : "Tesla CyberTruck",
+        precio : 39999
+    },
+    {
+        nombre : "Xiaomi Mi 9",
+        precio : 300
+    }
+];
 
 // Ruta para home
 app.use('/', (req, res) => {
-    res.send('Hello World!!!');
-} );
-
-app.listen(puerto, (req, res) => {
-    console.log(`Server listening on port: ${puerto}`)
+    res.json(productos);
 });
+
+app.listen(3000);
