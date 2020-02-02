@@ -1,23 +1,19 @@
-
 const express = require('express');
+const routes = require('./routes');
+const path = require('path');
 
 // Creando la app de Express
 const app = express();
 
-const productos = [
-    {
-        nombre : "Tesla CyberTruck",
-        precio : 39999
-    },
-    {
-        nombre : "Xiaomi Mi 9",
-        precio : 300
-    }
-];
+// Cargando archivos estáticos
+app.use(express.static('public'));
 
-// Ruta para home
-app.use('/', (req, res) => {
-    res.json(productos);
-});
+// Habilitando el motor de plantillas "pug"
+app.set('view engine', 'pug');
+
+// Añadiendo la carpeta de vistas
+app.set('views', path.join(__dirname, './views'));
+
+app.use('/', routes());
 
 app.listen(3000);
