@@ -10,6 +10,12 @@ const Proyectos = db.define('proyectos', {
     },
     nombre : Sequelize.STRING,
     url : Sequelize.STRING
+}, {
+    hooks : {
+        beforeCreate() {
+            console.log('Antes de insertar en la BD.');
+        }
+    }
 });
 
 module.exports = Proyectos;
